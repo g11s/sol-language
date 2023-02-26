@@ -87,8 +87,6 @@ namespace GenerateAst
 
             writer.WriteLine("        }");
 
-            
-
             writer.WriteLine("    }");
         }
     }

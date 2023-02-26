@@ -10,7 +10,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sol", "SolLanguage\Sol.cspr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{21CC6565-35CF-42AB-9842-2DBC4005BFA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateAst", "GenerateAst\GenerateAst.csproj", "{C84E1A19-CFFB-46D5-A11E-779BA41BB7F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenerateAst", "GenerateAst\GenerateAst.csproj", "{C84E1A19-CFFB-46D5-A11E-779BA41BB7F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

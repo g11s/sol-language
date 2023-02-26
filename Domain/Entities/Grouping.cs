@@ -1,11 +1,18 @@
+using Domain.Interfaces.Business;
+
 namespace Domain.Entities
 {
-    public class Grouping
+    public class Grouping : Expression
     {
-        private Expression expression;
+        public Expression expression;
 
         public Grouping(Expression expression) {
             this.expression = expression;
+        }
+
+        public override string Accept(ExpressionVisitor visitor)
+        {
+            return visitor.visit(this);
         }
     }
 }

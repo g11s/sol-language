@@ -1,13 +1,20 @@
+using Domain.Interfaces.Business;
+
 namespace Domain.Entities
 {
-    public class Unary
+    public class Unary : Expression
     {
-        private Token operator;
-        private Expression right;
+        public Token op;
+        public Expression right;
 
-        public Unary(Token operator, Expression right) {
-            this.operator = operator;
+        public Unary(Token op, Expression right) {
+            this.op = op;
             this.right = right;
+        }
+
+        public override string Accept(ExpressionVisitor visitor)
+        {
+            return visitor.visit(this);
         }
     }
 }

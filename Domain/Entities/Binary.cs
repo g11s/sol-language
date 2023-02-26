@@ -1,15 +1,22 @@
+using Domain.Interfaces.Business;
+
 namespace Domain.Entities
 {
-    public class Binary
+    public class Binary : Expression
     {
-        private Expression left;
-        private Token op;
-        private Expression right;
+        public Expression left;
+        public Token op;
+        public Expression right;
 
         public Binary(Expression left, Token op, Expression right) {
             this.left = left;
             this.op = op;
             this.right = right;
+        }
+
+        public override string Accept(ExpressionVisitor visitor)
+        {
+            return visitor.visit(this);
         }
     }
 }
