@@ -10,9 +10,9 @@ namespace Domain.Entities
             this.expression = expression;
         }
 
-        public override string Accept(ExpressionVisitor visitor)
+        public override dynamic Accept(ExpressionVisitor visitor)
         {
-            return visitor.visit(this);
+            return visitor.Visit(this);
         }
     }
 }

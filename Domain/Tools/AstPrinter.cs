@@ -11,29 +11,29 @@ namespace Domain.Tools
             return expression.Accept(this);
         }
 
-        public string visit(Binary binary)
+        public dynamic Visit(Binary binary)
         {
-            return parenthesize(binary.op.Lexeme,
+            return Parenthesize(binary.op.Lexeme,
                                 binary.left, binary.right);
         }
 
-        public string visit(Grouping grouping)
+        public dynamic Visit(Grouping grouping)
         {
-            return parenthesize("group", grouping.expression);
+            return Parenthesize("group", grouping.expression);
         }
 
-        public string visit(Literal literal)
+        public dynamic Visit(Literal literal)
         {
             if (literal.value == null) return "nil";
             return literal.value.ToString();
         }
 
-        public string visit(Unary unary)
+        public dynamic Visit(Unary unary)
         {
-            return parenthesize(unary.op.Lexeme, unary.right);
+            return Parenthesize(unary.op.Lexeme, unary.right);
         }
 
-        private string parenthesize(string name, params Expression[] expressions)
+        private string Parenthesize(string name, params Expression[] expressions)
         {
             StringBuilder builder = new StringBuilder();
 

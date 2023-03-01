@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Tools;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,6 +9,8 @@ namespace Domain.Business
 {
     public class Core
     {
+        private static Interpreter Interpreter = new Interpreter();
+
         public static void RunFile(string path)
         {
             try
@@ -26,6 +29,12 @@ namespace Domain.Business
         {
             Scanner scanner = new Scanner(source);
             List<Token> tokens = scanner.ScanTokens();
+
+            Parser parser = new Parser(tokens);
+            Expression expression = parser.Parse();
+
+            Console.WriteLine(new AstPrinter().Print(expression));
+            Interpreter.Interpret(expression);
 
             foreach (Token token in tokens)
             {

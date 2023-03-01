@@ -4,6 +4,6 @@ namespace Domain.Entities
 {
     public abstract class Expression
     {
-        public abstract string Accept(ExpressionVisitor visitor);
+        public abstract dynamic Accept(ExpressionVisitor visitor);
     }
 }

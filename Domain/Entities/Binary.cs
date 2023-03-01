@@ -14,9 +14,9 @@ namespace Domain.Entities
             this.right = right;
         }
 
-        public override string Accept(ExpressionVisitor visitor)
+        public override dynamic Accept(ExpressionVisitor visitor)
         {
-            return visitor.visit(this);
+            return visitor.Visit(this);
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using Domain.Business;
+﻿using Domain.Entities;
 using Domain.Enums;
 using System.Collections.Generic;
 
-namespace Domain.Entities
+namespace Domain.Business
 {
     public class Scanner
     {
