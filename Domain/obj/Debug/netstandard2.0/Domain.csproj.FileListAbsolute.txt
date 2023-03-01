@@ -1,4 +1,0 @@
-C:\Users\dev-g\source\repos\SolLanguage\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
-C:\Users\dev-g\source\repos\SolLanguage\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
-C:\Users\dev-g\source\repos\SolLanguage\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
-C:\Users\dev-g\source\repos\SolLanguage\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
